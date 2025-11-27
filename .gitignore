@@ -1,0 +1,31 @@
+# Archivos temporales
+*.tmp
+*.log
+*.swp
+*.bak
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Backup files
+*~
+
+# Directorios de IDEs
+.vscode/
+.idea/
+
+# Archivos de datos temporales
+/temp/
+/data/
+
+# Logs de la aplicación
+logs/
+
+# Archivos de configuración local
+config.local.sh
+
+# Archivos ejecutables compilados
+*.exe
+*.out
+
