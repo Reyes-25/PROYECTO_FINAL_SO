@@ -1,18 +1,29 @@
-# Consola de Operaciones - Empresa XYZ
+# PROYECTO_FINAL_SO
+Consola de Operaciones en Bash para administración de sistemas Linux.
 
-## Proyecto Final de Sistemas Operativos
+## Características
+- Gestión de procesos  
+- Información general del sistema  
+- Administración de archivos y directorios  
+- Módulos de seguridad  
+- Scripts completamente modulares  
 
-### Integrantes:
-1. Amir Reyes - Módulos 1 y 2 (Procesos e Información General)
-2. Hector Ortega - Módulo 3 (Archivos-Directorios)
-3. Eric Cedeño - Módulo 4 (Seguridad)
-
-### Descripción:
-Herramienta en Shell Script para la gestión de Sistemas Linux
-
-### Instalación:
+## Instalación
 ```bash
-git clone [url-del-repositorio]
+git clone https://github.com/Reyes-25/PROYECTO_FINAL_SO.git
 cd PROYECTO_FINAL_SO
 chmod +x *.sh modulos/*.sh lib/*.sh
 ./consola_operaciones.sh
+```
+
+## Ejecución
+```bash
+./consola_operaciones.sh
+```
+
+## Autores
+Amir Reyes
+Hector Ortega
+Eric Cedeño
+  
+Proyecto Final – Sistemas Operativos

@@ -10,10 +10,13 @@ BLUE='\033[0;34m'
 CYAN='\033[0;36m'
 NC='\033[0m' # No Color
 
-# Cargar módulos de Dev 1 (Amir Reyes)
-source "modulos/procesos.sh"
-source "modulos/informacion_general.sh"
-source "lib/compatibilidad.sh"
+# Cargar módulos
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "${script_dir}/lib/compatibilidad.sh"
+source "${script_dir}/modulos/procesos.sh"
+source "${script_dir}/modulos/informacion_general.sh"
+source "${script_dir}/modulos/archivos_directorios.sh"
+source "${script_dir}/modulos/seguridad.sh"
 
 mostrar_header() {
     clear
@@ -44,8 +47,8 @@ pausa() {
 main() {
     while true; do
         mostrar_menu_principal
-        read opcion
-        
+        read -r opcion
+
         case $opcion in
             1)
                 menu_procesos
@@ -54,16 +57,10 @@ main() {
                 menu_informacion_general
                 ;;
             3)
-                echo -e "${YELLOW}Módulo Archivos-Directorios${NC}"
-                echo "👤 Asignado a: Hector Ortega"
-                echo "⏰ Estado: Pendiente"
-                pausa
+                menu_archivos_directorios
                 ;;
             4)
-                echo -e "${YELLOW}Módulo Seguridad${NC}"
-                echo "👤 Asignado a: Eric Cedeño"
-                echo "⏰ Estado: Pendiente"
-                pausa
+                menu_seguridad
                 ;;
             5)
                 echo -e "${GREEN}Saliendo del sistema...${NC}"
@@ -84,4 +81,3 @@ sleep 1
 
 # Iniciar programa
 main
-
